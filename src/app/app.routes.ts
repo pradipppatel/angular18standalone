@@ -5,27 +5,34 @@ import { ContactComponent } from './common/contact/contact.component';
 import { CustomerComponent } from './common/customer/customer.component';
 import { AddComponent } from './common/add/add.component';
 import { StatusComponent } from './common/status/status.component';
+import { authGuard } from './Guard/auth.guard';
+import { childauthGuard } from './Guard/childauth.guard';
+import { authdGuard } from './Guard/authd.guard';
 
 export const routes: Routes = [
     {
         path:'',
-        component:HomeComponent
+        component:HomeComponent,canActivate:[authGuard]
     },
     {
         path:'about',
-        component:AboutComponent
+        component:AboutComponent,canActivate:[authGuard]
     },
     {
         path:'about/:submenu/:id',
-        component:AboutComponent
+        component:AboutComponent,canActivate:[authGuard]
     },
     {
         path:'contact',
-        component:ContactComponent
+        loadComponent:()=>import('./common/contact/contact.component').then(m=>m.ContactComponent),
+        canActivate:[authGuard]
     },
     {
         path:'customer',
         component:CustomerComponent,
+        canActivate:[authGuard],
+        canActivateChild:[childauthGuard],
+        canDeactivate:[authdGuard],
         children:[
             {
                 path:'add',

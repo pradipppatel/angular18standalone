@@ -18,9 +18,19 @@
       <input type="checkbox" [checked]="isDisabled"><br />
       <input type="checkbox" checked={{isDisabled}}><br />
       <input [(ngModel)]="title">
-      <button (click)="ChangeTitle()">Click Here</button><br />
+      <button (click)="ChangeTitle()">Click Here</button><br /><br />
   
+      <div [ngClass]="_class">
+        <h2>Attribute active directive</h2>
+      </div>
   
+      <div [ngClass]="{'active':isDisabled, 'inactive':!isDisabled}">
+        <h2>Attribute directive</h2>
+      </div>
+
+      <div class="inactive">
+        <h2>Attribute inactive directive</h2>
+      </div>
     </mat-card-content>
     <mat-card-actions>
     </mat-card-actions>

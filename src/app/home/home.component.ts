@@ -13,6 +13,7 @@ import { FormsModule } from '@angular/forms';
 })
 export class HomeComponent {
 
+  _class = 'active';
   title = 'Angular 18 Tutorial';
   subtitle = 'Angular for bigginers';
   todaydate = new Date();
