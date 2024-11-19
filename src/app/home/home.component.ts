@@ -21,6 +21,14 @@ export class HomeComponent {
   obj = {'name':'pradip'};
 
   isDisabled = false;
+  isShow = true;
+  ticketInfo = [
+    {'id':1, 'name':'Pradip', color:'orange'},
+    {'id':2, 'name':'P', color:'blue'},
+    {'id':3, 'name':'Patel', color:'green'}
+  ]
+
+  _view = 'about';
 
   ChangeTitle(){
     this.title = 'Angular 18 For Tutorial';

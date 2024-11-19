@@ -8,44 +8,54 @@ import { StatusComponent } from './common/status/status.component';
 import { authGuard } from './Guard/auth.guard';
 import { childauthGuard } from './Guard/childauth.guard';
 import { authdGuard } from './Guard/authd.guard';
+import { LoginComponent } from './common/login/login.component';
+import { RegisterComponent } from './common/register/register.component';
 
 export const routes: Routes = [
     {
-        path:'',
-        component:HomeComponent,canActivate:[authGuard]
+        path: '',
+        component: HomeComponent, canActivate: [authGuard]
     },
     {
-        path:'about',
-        component:AboutComponent,canActivate:[authGuard]
+        path: 'about',
+        component: AboutComponent, canActivate: [authGuard]
     },
     {
-        path:'about/:submenu/:id',
-        component:AboutComponent,canActivate:[authGuard]
+        path: 'about/:submenu/:id',
+        component: AboutComponent, canActivate: [authGuard]
     },
     {
-        path:'contact',
-        loadComponent:()=>import('./common/contact/contact.component').then(m=>m.ContactComponent),
-        canActivate:[authGuard]
+        path: 'login',
+        component: LoginComponent
     },
     {
-        path:'customer',
-        component:CustomerComponent,
-        canActivate:[authGuard],
-        canActivateChild:[childauthGuard],
-        canDeactivate:[authdGuard],
-        children:[
+        path: 'register',
+        component: RegisterComponent
+    },
+    {
+        path: 'contact',
+        loadComponent: () => import('./common/contact/contact.component').then(m => m.ContactComponent),
+        canActivate: [authGuard]
+    },
+    {
+        path: 'customer',
+        component: CustomerComponent,
+        canActivate: [authGuard],
+        canActivateChild: [childauthGuard],
+        canDeactivate: [authdGuard],
+        children: [
             {
-                path:'add',
-                component:AddComponent
+                path: 'add',
+                component: AddComponent
             },
             {
-                path:'edit/:id',
-                component:AddComponent
+                path: 'edit/:id',
+                component: AddComponent
             }
         ]
     },
     {
-        path:'**',
-        component:StatusComponent
+        path: '**',
+        component: StatusComponent
     }
 ];

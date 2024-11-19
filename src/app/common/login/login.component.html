@@ -1,0 +1,30 @@
+<form class="example-form" #loginform="ngForm" (ngSubmit)="ProceedLogin(loginform)">
+    <mat-card>
+        <mat-card-header>
+            <h2>Login</h2>
+        </mat-card-header>
+
+        <mat-card-content>
+
+            <mat-form-field class="example-full-width">
+                <mat-label>UserName</mat-label>
+                <input required matInput placeholder="UserName" [(ngModel)]="_logindata.username" #username="ngModel"
+                    name="username">
+                <!-- <div *ngIf="username.invalid && username.touched">UserName is required.</div> -->
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+                <mat-label>Password</mat-label>
+                <input required matInput placeholder="Password" type="password" [(ngModel)]="_logindata.password"
+                    #password="ngModel" name="password">
+            </mat-form-field>
+
+        </mat-card-content>
+
+        <mat-card-actions>
+            <button mat-raised-button color="primary" type="submit">Login</button>
+            <!-- <button mat-raised-button color="primary" type="submit" [disabled]="loginform.invalid">Login</button> -->
+            <a mat-raised-button color="accent" routerLink="/register">Register User</a>
+        </mat-card-actions>
+    </mat-card>
+</form>
