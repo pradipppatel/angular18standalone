@@ -13,7 +13,11 @@ export class MasterService {
     return this.http.get<User[]>('http://localhost:3000/user?id=' + _data.username + '&password=' + _data.password);
   }
 
-  IsLoggedIn(){
+  ProceedRegister(_data: User) {
+    return this.http.post('http://localhost:3000/user', _data);
+  }
+
+  IsLoggedIn() {
     return localStorage.getItem('username') != null;
   }
 }

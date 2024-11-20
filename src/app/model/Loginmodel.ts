@@ -8,4 +8,12 @@ export interface User {
     password: string;
     name: string;
     role: string;
+    gender: string;
+    email: string;
 }
+
+export interface Role {
+    value: string;
+    viewValue: string;
+}
+

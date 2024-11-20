@@ -10,6 +10,7 @@ import { childauthGuard } from './Guard/childauth.guard';
 import { authdGuard } from './Guard/authd.guard';
 import { LoginComponent } from './common/login/login.component';
 import { RegisterComponent } from './common/register/register.component';
+import { ProductComponent } from './common/product/product.component';
 
 export const routes: Routes = [
     {
@@ -53,6 +54,10 @@ export const routes: Routes = [
                 component: AddComponent
             }
         ]
+    },
+    {
+        path: 'product',
+        component: ProductComponent,canActivate:[authGuard]
     },
     {
         path: '**',

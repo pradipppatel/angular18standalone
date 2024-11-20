@@ -1,16 +1,152 @@
 {
-    "user": [
-        {
-            "id": "admin",
-            "name": "pradip patel",
-            "password": "ppatel",
-            "role": "admin"
-        },
-        {
-            "id": "sales",
-            "name": "sales user",
-            "password": "suser",
-            "role": "salesman"
-        }
-    ]
+  "user": [
+    {
+      "id": "admin",
+      "name": "pradip patel",
+      "password": "ppatel",
+      "role": "admin"
+    },
+    {
+      "id": "sales",
+      "name": "sales user",
+      "password": "suser",
+      "role": "salesman"
+    },
+    {
+      "id": "pradippatel",
+      "password": "pradippatel",
+      "name": "Pradip Patel",
+      "role": "Manager",
+      "gender": "m",
+      "email": "pradip.patel@samyak.com"
+    }
+  ],
+  "product": [
+    {
+      "id": 1,
+      "name": "Moto Edge 50",
+      "description": "Motorola Smart Phone",
+      "price": 28000,
+      "status": true
+    },
+    {
+      "id": 2,
+      "name": "Samsung Galaxy G24",
+      "description": "Samsung Smart Phone",
+      "price": 32000,
+      "status": false
+    },
+    {
+      "id": 3,
+      "name": "iPhone 16",
+      "description": "Apple Smart Phone",
+      "price": 145000,
+      "status": false
+    },
+    {
+      "id": 4,
+      "name": "Google Pixel 8a",
+      "description": "Google Smart Phone",
+      "price": 88000,
+      "status": true
+    },
+    {
+      "id": 5,
+      "name": "OnePlus 12R",
+      "description": "OnePlus Smart Phone",
+      "price": 38000,
+      "status": true
+    },
+    {
+      "id": 6,
+      "name": "Moto Edge 50 Ultra",
+      "description": "Motorola Smart Phone",
+      "price": 35000,
+      "status": false
+    },
+    {
+      "id": 7,
+      "name": "Samsung M35",
+      "description": "Samsung Smart Phone",
+      "price": 18000,
+      "status": true
+    },
+    {
+      "id": 8,
+      "name": "iPhone 16 Pro",
+      "description": "Apple Smart Phone",
+      "price": 165000,
+      "status": true
+    },
+    {
+      "id": 9,
+      "name": "Honor 9x Pro",
+      "description": "Honor Smart Phone",
+      "price": 37000,
+      "status": false
+    },
+    {
+      "id": 10,
+      "name": "OnePlus 13",
+      "description": "OnePlus Smart Phone",
+      "price": 42000,
+      "status": false
+    },
+    {
+      "id": 11,
+      "name": "Sony Xperia 1",
+      "description": "Sony Smart Phone",
+      "price": 46000,
+      "status": true
+    },
+    {
+      "id": 12,
+      "name": "Honor Magic 7 Pro",
+      "description": "Honor Smart Phone",
+      "price": 33000,
+      "status": true
+    },
+    {
+      "id": 13,
+      "name": "Moto Edge Neo 50",
+      "description": "Motorola Smart Phone",
+      "price": 22000,
+      "status": false
+    },
+    {
+      "id": 14,
+      "name": "Google Pixel 9",
+      "description": "Google Smart Phone",
+      "price": 85000,
+      "status": true
+    },
+    {
+      "id": 15,
+      "name": "Sony Xperia XA1 Ultra",
+      "description": "Sony Smart Phone",
+      "price": 69000,
+      "status": true
+    },
+    {
+      "id": 16,
+      "name": "Moto G85",
+      "description": "Motorola Smart Phone",
+      "price": 18000,
+      "status": false
+    },
+    {
+      "id": 17,
+      "name": "Honor 200 5G",
+      "description": "Honor Smart Phone",
+      "price": "30000",
+      "status": true
+    },
+    {
+      "id": 18,
+      "name": "Moto Edge 60 Ultra",
+      "description": "Motorola Smart Phone",
+      "price": "70000",
+      "status": true
+    }
+  ]
 }
