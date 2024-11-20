@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { ProductService } from '../../service/product.service';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -7,7 +7,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { Products } from '../../model/Productmodel';
-import { MatDialogRef } from '@angular/material/dialog';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-addproduct',
@@ -17,11 +17,19 @@ import { MatDialogRef } from '@angular/material/dialog';
   templateUrl: './addproduct.component.html',
   styleUrl: './addproduct.component.css'
 })
-export class AddproductComponent {
+export class AddproductComponent implements OnInit {
 
   builder = new FormBuilder();
-  constructor(private service: ProductService, private ref: MatDialogRef<AddproductComponent>) {
+  _dialogdata:any;
 
+  constructor(private service: ProductService, private ref: MatDialogRef<AddproductComponent>,
+    @Inject(MAT_DIALOG_DATA) public data: any
+  ) {
+
+  }
+
+  ngOnInit(): void {
+    this._dialogdata = this.data;
   }
 
   productform = this.builder.group({
