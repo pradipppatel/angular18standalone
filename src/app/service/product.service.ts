@@ -16,7 +16,7 @@ export class ProductService {
   }
 
   GetProductbyId(id: number) {
-    return this.http.get<Products>(this.baseUrl + '/' + id);
+    return this.http.get<Products[]>(this.baseUrl + '?id=' + id);
   }
 
   CreateProduct(_data: Products) {
@@ -24,10 +24,10 @@ export class ProductService {
   }
 
   UpdateProdct(_data: Products) {
-    return this.http.post(this.baseUrl + '/' + _data.id, _data);
+    return this.http.put(this.baseUrl + '?id=' + _data.id, _data);
   }
 
   RemoveProduct(id: number) {
-    return this.http.delete(this.baseUrl + '/' + id);
+    return this.http.delete(this.baseUrl + '?id=' + id);
   }
 }

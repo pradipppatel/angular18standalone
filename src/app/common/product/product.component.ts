@@ -70,6 +70,11 @@ export class ProductComponent implements OnInit {
   }
 
   DeleteProduct(id: number) {
-
+    if (confirm('Do you want to delete?')){
+      this.service.RemoveProduct(id).subscribe(item =>{
+        alert('Deleted successfully');
+        this.LoadProducts();
+      });
+    }
   }
 }

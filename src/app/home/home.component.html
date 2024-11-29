@@ -48,6 +48,14 @@
           <h2>This is default view</h2>
         </div>        
       </div>
+      <div>
+        <ul>
+          @for (item of _custdata; track item) 
+          {
+            <li>{{item.name}}</li>
+          }
+        </ul>
+      </div>
 
       <div class="inactive">
         <h2>Attribute inactive directive</h2>

@@ -147,6 +147,48 @@
       "description": "Motorola Smart Phone",
       "price": "70000",
       "status": true
+    },
+    {
+      "id": 2,
+      "name": "Samsung Galaxy G24",
+      "description": "Samsung Smart Phone",
+      "price": 32000,
+      "status": false
+    },
+    {
+      "id": 2,
+      "name": "Samsung Galaxy G24",
+      "description": "Samsung Smart Phone",
+      "price": "32500",
+      "status": true
+    },
+    {
+      "id": 2,
+      "name": "Samsung Galaxy G24",
+      "description": "Samsung Smart Phone",
+      "price": 32000,
+      "status": true
+    },
+    {
+      "id": 2,
+      "name": "Samsung Galaxy G24",
+      "description": "Samsung Smart Phone",
+      "price": 32000,
+      "status": false
+    },
+    {
+      "id": 2,
+      "name": "Samsung Galaxy G24",
+      "description": "Samsung Smart Phone",
+      "price": 32000,
+      "status": true
+    },
+    {
+      "id": 0,
+      "name": "Moto Edge 60 Prime",
+      "description": "Motorola Smart Phone",
+      "price": "35000",
+      "status": true
     }
   ]
 }
