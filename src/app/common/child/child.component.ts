@@ -19,5 +19,6 @@ export class ChildComponent {
 
   updatefruits(fruitname: string){
     this.fruits.push(fruitname);
+    return 'Fruit Added.';
   }
 }

@@ -1,0 +1,10 @@
+<div style="margin-left: 5px;">
+    <h2>
+        Counter value is : {{service.countervalue()}}
+    </h2>
+</div>
+<ul>
+    @for (item of service.players(); track item) {
+        <li>{{item.id}} - {{item.name}}</li>
+    }
+</ul>

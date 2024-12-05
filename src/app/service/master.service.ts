@@ -1,12 +1,15 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { Injectable, signal } from '@angular/core';
 import { Loginmodel, User } from '../model/Loginmodel';
-import { Customers } from '../model/MasterModel';
+import { Customers } from '../model/Mastermodel';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MasterService {
+
+  countervalue = signal<number>(0);
+  players = signal([{'id':1, 'name':'Pradip'}]);
 
   constructor(private http: HttpClient) { }
 

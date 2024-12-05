@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { ReversePipe } from '../custom/reverse.pipe';
 import { FormsModule } from '@angular/forms';
 import { MasterService } from '../service/master.service';
-import { Customers } from '../model/MasterModel';
+import { Customers } from '../model/Mastermodel';
 import { ChildComponent } from "../common/child/child.component";
 
 @Component({
@@ -55,7 +55,8 @@ export class HomeComponent {
   }
 
   addfruit(fruit:string){
-    this._child.updatefruits(fruit);
+    let resp = this._child.updatefruits(fruit);
+    console.log(resp);
   }
 
   GetAllCustomer() {
