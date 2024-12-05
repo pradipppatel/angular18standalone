@@ -1,0 +1,19 @@
+<h5>
+    Transfering from Parent to Child
+</h5>
+<h2>
+    Welcome: {{firstName}} - {{lastName}}
+    {{nameObj | json}}
+</h2>
+<br>
+<h5>
+    Transfering from Child to Parent
+</h5>
+<input #name><br />
+<button (click)="dataupdater.emit(name.value)">Transfer</button>
+
+<ul>
+    @for (item of fruits; track item) {
+        <li>{{item}}</li>
+    }
+</ul>
