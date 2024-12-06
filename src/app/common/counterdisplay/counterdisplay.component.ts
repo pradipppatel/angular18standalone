@@ -1,4 +1,4 @@
-import { Component, effect, OnInit } from '@angular/core';
+import { Component, computed, effect, OnInit } from '@angular/core';
 import { MasterService } from '../../service/master.service';
 
 @Component({
@@ -11,6 +11,7 @@ import { MasterService } from '../../service/master.service';
 export class CounterdisplayComponent implements OnInit {
 
   displayvalue= 0;
+  totalplayers = computed(()=>this.service.players().length);
   
   constructor(public service: MasterService){
     effect(()=>{
