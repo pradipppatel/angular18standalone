@@ -12,6 +12,7 @@ import { FormsModule } from '@angular/forms';
 })
 export class CustomerComponent {
   userinput = '';
+  isloading = false;
 
   canNavigate(){
     if (this.userinput !== ''){

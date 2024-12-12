@@ -9,3 +9,31 @@
     }
 </ul>
 <h2>We have {{totalplayers()}} player(s)</h2>
+<h2>We have {{_totalplayers | async}} player(s)</h2>
+<h2>We have {{_signalcount()}} player(s)</h2>
+
+<div>
+    @if(totalplayers() == 0){
+        <h1>No users</h1>
+    }
+    @else if(totalplayers() == 1){
+        <h1>Single user</h1>
+    }
+    @else{
+        <h1>More users</h1>
+    }
+</div>
+
+<div>
+    @switch(totalplayers()){
+        @case (0) {
+            <h1>No users</h1>
+        }
+        @case (1) {
+            <h1>Single user</h1>
+        }
+        @default {
+            <h1>More users</h1>
+        }
+    }
+</div>

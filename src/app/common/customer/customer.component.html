@@ -3,3 +3,53 @@
 <button routerLink="edit/01" mat-button>Edit</button>
 <router-outlet></router-outlet>
 <input [(ngModel)]="userinput">
+
+<div>
+    <h1 #header>This is Customer Component</h1>
+</div>
+
+<!-- @defer (on timer(2000ms)) {
+    <div>
+        <h1>New comment for Customer Component</h1>
+    </div>
+}
+
+@placeholder {
+    <h2>Data will be available soon.</h2>
+} -->
+
+<!-- @defer (on idle) {
+    <div>
+        <h1>New comment for Customer Component</h1>
+    </div>
+}
+
+@placeholder {
+    <h2>Data will be available soon.</h2>
+} -->
+
+<!-- @defer (on interaction(header)) {
+    <div>
+        <h1>New comment for Customer Component</h1>
+        <h2>interaction</h2>
+        <h2>hover</h2>
+    </div>
+}
+
+@placeholder {
+    <h2>Data will be available soon.</h2>
+} -->
+
+@defer (when isloading) {
+    <div>
+        <h1>New comment for Customer Component</h1>
+        <h2>timer</h2>
+        <h2>idle</h2>
+        <h2>interaction</h2>
+        <h2>hover</h2>
+    </div>
+}
+
+@placeholder {
+    <h2>Data will be available soon.</h2>
+}

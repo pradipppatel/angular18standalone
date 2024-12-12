@@ -9,7 +9,7 @@ import { Customers } from '../model/Mastermodel';
 export class MasterService {
 
   countervalue = signal<number>(0);
-  players = signal([{'id':1, 'name':'Pradip'}]);
+  players = signal([{'id':1,'name':'pradip'}]);
 
   constructor(private http: HttpClient) { }
 
