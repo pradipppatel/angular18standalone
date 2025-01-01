@@ -40,16 +40,25 @@
     <h2>Data will be available soon.</h2>
 } -->
 
-@defer (when isloading) {
-    <div>
-        <h1>New comment for Customer Component</h1>
-        <h2>timer</h2>
-        <h2>idle</h2>
-        <h2>interaction</h2>
-        <h2>hover</h2>
-    </div>
-}
+<button (click)="load()">Click</button>
 
+<!-- @defer (when isloading) { -->
+
+@defer (when count > 2; on timer(1000ms)) {
+<div>
+    <h1>New comment for Customer Component</h1>
+    <h2>timer</h2>
+    <h2>idle</h2>
+    <h2>interaction</h2>
+    <h2>hover</h2>
+</div>
+}
 @placeholder {
-    <h2>Data will be available soon.</h2>
+<h2>Data will be available soon.</h2>
+}
+@loading(after 200ms; minimum 1s) {
+<h2>Loading...</h2>
+}
+@error {
+<h2>Error...</h2>
 }

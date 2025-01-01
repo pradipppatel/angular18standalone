@@ -11,6 +11,7 @@ import { authdGuard } from './Guard/authd.guard';
 import { LoginComponent } from './common/login/login.component';
 import { RegisterComponent } from './common/register/register.component';
 import { ProductComponent } from './common/product/product.component';
+import { LearnComponent } from './common/learn/learn.component';
 
 export const routes: Routes = [
     {
@@ -58,6 +59,9 @@ export const routes: Routes = [
     {
         path: 'product',
         component: ProductComponent, canActivate: [authGuard]
+    },
+    {
+        path: 'learn', component: LearnComponent
     },
     {
         path: '**',

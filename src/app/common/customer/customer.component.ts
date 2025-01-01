@@ -13,7 +13,8 @@ import { FormsModule } from '@angular/forms';
 export class CustomerComponent {
   userinput = '';
   isloading = false;
-
+  count = 1;
+  
   canNavigate(){
     if (this.userinput !== ''){
       if (confirm('If you navigating, your data will lost. Do you want to continue?')){
@@ -26,5 +27,10 @@ export class CustomerComponent {
     else{
       return true;
     }
+  }
+
+  load(){
+    this.isloading = true;
+    this.count++;
   }
 }
