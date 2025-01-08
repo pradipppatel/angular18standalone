@@ -7,17 +7,17 @@ import { loadProductFailure, loadProducts, loadProductSuccess } from "./Product.
 @Injectable()
 
 export class ProductEffect {
-    constructor(private actions$: Actions, private productService: ProductService) {
+    constructor(private actions$: Actions, private service: ProductService) {
         console.log('ProductEffect constructor');
     }
 
-    _loadproduct$ = createEffect(() =>
+    _loadproduct = createEffect(() =>
         this.actions$.pipe(
             ofType(loadProducts),
-            exhaustMap(() => {
-                return this.productService.GetAll().pipe(
+            exhaustMap((action) => {
+                return this.service.GetAll().pipe(
                     map((data) => { return loadProductSuccess({ list: data }) }),
-                    catchError((err) => of(loadProductFailure({ errormessage: err })))
+                    catchError((err) => of(loadProductFailure({ errormessage: err.errorMessage })))
                 )
             })
         )

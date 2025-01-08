@@ -9,8 +9,6 @@ import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
 import { MatSort, MatSortModule } from '@angular/material/sort';
 import { MatTableDataSource, MatTableModule } from '@angular/material/table';
 import { Products } from '../../model/Productmodel';
-import { ProductService } from '../../service/product.service';
-import { AddproductComponent } from '../addproduct/addproduct.component';
 import { Store } from '@ngrx/store';
 import { loadProducts } from '../../_store/Product.Action';
 import { getProductList } from '../../_store/Product.Selector';
